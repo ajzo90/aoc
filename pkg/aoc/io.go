@@ -1,4 +1,4 @@
-package io
+package aoc
 
 import (
 	"bufio"
@@ -32,4 +32,12 @@ func ReadLines(r io.Reader, f func(line []byte)) {
 
 		f(line)
 	}
+}
+
+func ReadLinesToList(r io.Reader) [][]byte {
+	var lines [][]byte
+	ReadLines(r, func(line []byte) {
+		lines = append(lines, append([]byte{}, line...))
+	})
+	return lines
 }
