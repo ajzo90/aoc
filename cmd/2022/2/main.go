@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aoc2022/pkg/io"
+	"aoc2022/pkg/aoc"
 	"fmt"
 	"os"
 )
@@ -28,7 +28,7 @@ func conv2(c1, c2 uint8) (uint8, uint8) {
 func main() {
 	var convFn = conv2
 	var sum int
-	io.ReadLines(os.Stdin, func(line []byte) {
+	aoc.ReadLines(os.Stdin, func(line []byte) {
 		sum += score(convFn(line[0], line[2]))
 	})
 	fmt.Println(sum)

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aoc2022/pkg/io"
+	"aoc2022/pkg/aoc"
 	"fmt"
 	"os"
 )
@@ -23,7 +23,7 @@ func main() {
 		},
 	}
 
-	io.ReadLines(os.Stdin, parts[0])
+	aoc.ReadLines(os.Stdin, parts[0])
 
 	fmt.Println(sum)
 }

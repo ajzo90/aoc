@@ -20,11 +20,11 @@ func main() {
 
 	aoc.Assert(example, fn1, "2")
 
-	aoc.WithData(day, fn1, "515")
+	aoc.WithData(2022, day, 1, fn1, "515")
 
 	aoc.Assert(example, fn2, "4")
 
-	aoc.WithData(day, fn2, "883")
+	aoc.WithData(2022, day, 2, fn2, "883")
 }
 
 var fn1 = func(f io.Reader) string {

@@ -3,6 +3,7 @@ package aoc
 import (
 	"bufio"
 	"io"
+	"strconv"
 )
 
 func ReadLines(r io.Reader, f func(line []byte)) {
@@ -40,4 +41,13 @@ func ReadLinesToList(r io.Reader) [][]byte {
 		lines = append(lines, append([]byte{}, line...))
 	})
 	return lines
+}
+
+func ReadLinesToIntList(r io.Reader) []int {
+	var out = make([]int, 0, 128)
+	ReadLines(r, func(line []byte) {
+		v, _ := strconv.Atoi(string(line))
+		out = append(out, v)
+	})
+	return out
 }

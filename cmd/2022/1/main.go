@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aoc2022/pkg/io"
+	"aoc2022/pkg/aoc"
 	"log"
 	"os"
 	"sort"
@@ -15,7 +15,7 @@ func main() {
 
 	const n = 3
 
-	io.ReadLines(os.Stdin, func(line []byte) {
+	aoc.ReadLines(os.Stdin, func(line []byte) {
 		if len(line) == 0 {
 			maxSums = append(maxSums, sum)
 			if len(maxSums) == n+1 {
