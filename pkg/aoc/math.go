@@ -1,19 +1,5 @@
 package aoc
 
-func Min[T numerical](a, b T) T {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func Max[T numerical](a, b T) T {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 type numerical interface {
 	int
 }
